@@ -13,17 +13,17 @@ abstract public class UR_HashTable<Key,Value> {
 
   abstract public void put (Key key, Value val) ;
 
-  // abstract public Value get (Key key) ;
-  //
-  // abstract public void delete(Key key) ;
-  //
-  // abstract public int size() ;
-  //
-  // abstract public boolean isEmpty() ;
-  //
-  // abstract public boolean contains(Key key);
-  //
-  // abstract public Iterable<Key> keys() ;
+  abstract public Value get (Key key) ;
+
+  abstract public void delete(Key key) ;
+
+  abstract public int size() ;
+
+  abstract public boolean isEmpty() ;
+
+  abstract public boolean contains(Key key);
+
+  abstract public Iterable<Key> keys() ;
 
   // Useful helpers
   // private int hash(Key key) ;

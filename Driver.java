@@ -9,5 +9,8 @@ public class Driver {
     table.put("f", "u");
     table.put("g", "t");
     table.print();
+    for (String key : table) {
+      System.out.println(key);
+    }
   }
 }
