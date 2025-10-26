@@ -1,3 +1,5 @@
+// lab partner: Norman Sackett
+
 import java.util.Arrays;
 import java.util.Iterator;
 
