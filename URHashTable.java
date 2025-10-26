@@ -15,7 +15,9 @@ public class URHashTable<Key,Value> extends UR_HashTable<Key,Value> implements I
     collisions = 0;
   }
 
-  public void put (Key key, Value val) {
+  public void put (Key key, Value val) throws Exception {
+    if (key == null) throw new Exception("Key cannot be null");
+    if (val == null) throw new Exception("Value cannot be null");
     int index = hash(key);
     int increment = 0;
     // find next available slot
@@ -36,14 +38,16 @@ public class URHashTable<Key,Value> extends UR_HashTable<Key,Value> implements I
     n++;
   }
 
-  public Value get (Key key) {
+  public Value get (Key key) throws Exception {
+    if (key == null) throw new Exception("Key cannot be null");
     for (int i = 0; i < keys.length; i++) {
       if (keys[i] != null && keys[i].equals(key)) return vals[i];
     }
     return null;
   }
 
-  public void delete(Key key) {
+  public void delete(Key key) throws Exception {
+    if (key == null) throw new Exception("Key cannot be null");
     for (int i = 0; i < keys.length; i++) {
       if (keys[i] != null && keys[i].equals(key)) {
         keys[i] = null;
@@ -61,7 +65,8 @@ public class URHashTable<Key,Value> extends UR_HashTable<Key,Value> implements I
     return this.size() == 0;
   }
 
-  public boolean contains(Key key) {
+  public boolean contains(Key key) throws Exception {
+    if (key == null) throw new Exception("Key cannot be null");
     for (int i = 0; i < keys.length; i++) {
       if (keys[i] != null && keys[i].equals(key)) return true;
     }
@@ -105,7 +110,7 @@ public class URHashTable<Key,Value> extends UR_HashTable<Key,Value> implements I
   }
 
   @SuppressWarnings("unchecked")
-  private void resize(int capacity) {
+  private void resize(int capacity) throws Exception {
     inserts = 0;
 
     // store old data

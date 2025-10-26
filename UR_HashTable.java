@@ -11,17 +11,17 @@ abstract public class UR_HashTable<Key,Value> {
   // public UR_HashTable() {}
   // public UR_HashTable(int cap) { }
 
-  abstract public void put (Key key, Value val) ;
+  abstract public void put (Key key, Value val) throws Exception ;
 
-  abstract public Value get (Key key) ;
+  abstract public Value get (Key key) throws Exception ;
 
-  abstract public void delete(Key key) ;
+  abstract public void delete(Key key) throws Exception ;
 
   abstract public int size() ;
 
   abstract public boolean isEmpty() ;
 
-  abstract public boolean contains(Key key);
+  abstract public boolean contains(Key key) throws Exception ;
 
   abstract public Iterable<Key> keys() ;
 
