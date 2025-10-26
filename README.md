@@ -15,7 +15,7 @@ To run the unit tests, compile with `javac *.java` and then run with `java Drive
 ### Included Files
 
 - `Driver.java`: contains the unit tests
-- `makefile`: compile/run easily for own testing purposes
+- `makefile`: compile/run easily for my own testing purposes
 - `README.md`: this file
 - `UR_HashTable.java`: interface defining methods to be implemented by hash table
 - `URHashTable.java`: implementaiton of hash table
